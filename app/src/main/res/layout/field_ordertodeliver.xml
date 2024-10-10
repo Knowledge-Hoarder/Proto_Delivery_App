@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewReviewItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listitembox">
+
+        <TextView
+            android:id="@+id/tvIdCustName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:maxWidth="200dp"
+            android:padding="2dp"
+            android:text="custname"
+            android:textColor="@color/ideal_darkgreen"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnDetails"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvIdAddress1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:paddingEnd="5dp"
+            android:maxWidth="170dp"
+            android:text="Address Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ideal_darkgreen"
+            android:gravity="end"
+            app:layout_constraintEnd_toStartOf="@+id/btnDetails"
+            app:layout_constraintStart_toEndOf="@+id/btnEnd"
+            app:layout_constraintTop_toBottomOf="@+id/tvIdCustName" />
+
+        <TextView
+            android:id="@+id/tvIdAddress2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:gravity="end"
+            android:paddingEnd="5dp"
+            android:text="Address Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ideal_darkgreen"
+            app:layout_constraintEnd_toStartOf="@+id/btnDetails"
+            app:layout_constraintStart_toEndOf="@+id/tvOdTotalPacks"
+            app:layout_constraintTop_toBottomOf="@+id/tvIdAddress1" />
+
+        <TextView
+            android:id="@+id/tvIdZip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingEnd="5dp"
+            android:text="Zip Code Text"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ideal_darkgreen"
+            app:layout_constraintEnd_toStartOf="@+id/btnMap"
+            app:layout_constraintStart_toEndOf="@+id/tvOdTotalPacks"
+            app:layout_constraintTop_toBottomOf="@+id/tvIdAddress2" />
+
+        <TextView
+            android:id="@+id/tvIdState"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="end"
+            android:text="State"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ideal_darkgreen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvIdCountry"
+            app:layout_constraintTop_toBottomOf="@+id/tvIdZip" />
+
+        <TextView
+            android:id="@+id/tvIdCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="end"
+            android:paddingEnd="5dp"
+            android:text="Country"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ideal_darkgreen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnMap"
+            app:layout_constraintTop_toBottomOf="@+id/tvIdZip" />
+
+        <Button
+            android:id="@+id/btnDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:height="65dp"
+            android:background="@drawable/round_btn_upperright"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:text="@string/details"
+            android:textAlignment="viewStart"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnMap"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:height="65dp"
+            android:background="@drawable/round_btn_lowerright"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:text="@string/map"
+            android:textAlignment="viewStart"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvIdAddress1" />
+
+
+        <Button
+            android:id="@+id/btnEnd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:height="65dp"
+            android:background="@drawable/round_btn_lowerleft"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:text="@string/deliver_norder"
+            android:textAlignment="viewStart"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnMap" />
+
+        <TextView
+            android:id="@+id/tvOdTotalPacks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Total\nPacks"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ideal_darkgreen"
+            app:layout_constraintStart_toEndOf="@+id/btnEnd"
+            app:layout_constraintTop_toBottomOf="@+id/tvIdAddress1" />
+
+        <TextView
+            android:id="@+id/tvOdTotalPacksValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/ideal_darkgreen"
+            app:layout_constraintEnd_toStartOf="@+id/tvIdZip"
+            app:layout_constraintStart_toEndOf="@+id/btnEnd"
+            app:layout_constraintTop_toBottomOf="@+id/tvOdTotalPacks" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
